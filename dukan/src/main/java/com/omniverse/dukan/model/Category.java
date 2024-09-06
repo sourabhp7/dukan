@@ -1,6 +1,5 @@
 package com.omniverse.dukan.model;
 
-import java.math.BigDecimal;
 import java.util.List;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,4 +26,11 @@ public class Category {
 	
 	@OneToMany(mappedBy = "category")
 	private List<Product>products;
+
+	public Category(String name) {
+		super();
+		this.name = name;
+	}
+	
+	
 }
